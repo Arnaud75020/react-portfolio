@@ -5,7 +5,7 @@ export const About = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5rem 10rem;
+    padding: 5rem 5rem 5rem 10rem;
     color: white;
 `;
 
@@ -21,7 +21,7 @@ export const Image = styled.div`
     flex: 1;
     overflow: hidden;
     img {
-        width: 80%;
+        width: 70%;
         height: 60vh;
         object-fit: cover;
 
