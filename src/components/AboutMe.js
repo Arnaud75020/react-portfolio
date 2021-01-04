@@ -9,7 +9,7 @@ const AboutMe = () => {
             <div className="question">
                 <h3>How did I start</h3>
                 <div className="answer">
-                    <p>My story</p>
+                    <p>I decided to change career in the late 2019 and enrolled an intense 5 months fullstack bootcamp in march 2020 in Wild Code School Lisbon to fully commit in the Web Development field.</p>
                 </div>
                 <div className="aboutme-line"></div>
             </div>

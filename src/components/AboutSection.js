@@ -1,6 +1,5 @@
 import React from 'react';
 import Arnaud from '../assets/images/Arnaud.jpg';
-import styled from 'styled-components';
 import {About, Description, Hide, Image} from '../styles';
 
 const AboutSection = () => {
@@ -15,7 +14,7 @@ const AboutSection = () => {
                         <h2>My name is <span>Arnaud</span>,</h2>
                     </Hide>
                     <Hide>
-                        <h2>I'm a <span>Web Developer</span></h2>
+                        <h2>I'm a <span>W</span><span>e</span><span>b</span><span> </span><span>Developer</span>.</h2>
                     </Hide>
                 </div>
                 <p>Contact me for project inquiry</p>

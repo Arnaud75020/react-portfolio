@@ -3,7 +3,8 @@ import AboutMe from '../components/AboutMe';
 import AboutSection from '../components/AboutSection';
 import SkillsSection from '../components/SkillsSection';
 
-const AboutUs = () => {
+const HomePage = () => {
+
     return ( 
         <>
             <AboutSection />
@@ -13,4 +14,4 @@ const AboutUs = () => {
      );
 }
  
-export default AboutUs;
+export default HomePage;

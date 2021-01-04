@@ -1,0 +1,266 @@
+[
+    {
+        "name": "Music Player",
+        "mainImg": "../images/music-player.png",
+        "secondaryImg": "",
+        "type": "Personal Project",
+        "url": "/work/music-player",
+        "website": "https://react-music-player-mocha.vercel.app/",
+        "skills": [
+            {
+                "frontEnd": [
+                    {
+                        "name": "HTML5",
+                        "skillIcon": "../icons/HTML.svg"
+                    },
+                    {
+                        "name": "CSS3",
+                        "skillIcon":"../icons/CSS.svg"
+                    },
+                    {
+                        "name": "Javascript",
+                        "skillIcon": "../icons/JS.svg"
+                    },
+                    {
+                        "name": "ReactJS",
+                        "skillIcon": "../icons/ReactJs.svg"
+                    }
+                ],
+                "backEnd": [],
+                "workFlow": [
+                    {
+                        "name": "GitHub",
+                        "skillIcon": "../icons/github.svg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Productized - Event Manager",
+        "mainImg": "../images/productized.png",
+        "secondaryImg": "",
+        "type": "Academic Project",
+        "url": "/work/productized",
+        "website": "",
+        "skills": [
+            {
+                "frontEnd": [
+                    {
+                        "name": "HTML5",
+                        "skillIcon": "../icons/HTML.svg"
+                    },
+                    {
+                        "name": "CSS3",
+                        "skillIcon": "../icons/CSS.svg"                    },
+                    {
+                        "name": "Javascript",
+                        "skillIcon": "../icons/JS.svg"
+                    },
+                    {
+                        "name": "ReactJS",
+                        "skillIcon": "../icons/ReactJs.svg"
+                    }
+                ],
+                "backEnd": [
+                    {
+                        "name": "Node",
+                        "skillIcon": "../icons/nodejs.svg"                    
+                    },
+                    {
+                        "name": "Express",
+                        "skillIcon": "../icons/express.svg"                    
+                    },
+                    {
+                        "name": "mySQL",
+                        "skillIcon": "../icons/mysql.svg"                    
+                    }
+                ],
+                "workFlow": [
+                    {
+                        "name": "SCRUM",
+                        "skillIcon": "../icons/scrum.svg"                    
+                    },
+                    {
+                        "name": "Figma",
+                        "skillIcon": "../icons/figma.svg"                    
+                    },
+                    {
+                        "name": "Git/GitHub",
+                        "skillIcon": "../icons/github.svg"                    
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Med Oclock",
+        "mainImg": "../images/med-oclock1.png",
+        "secondaryImg": "../images/med-oclock2.png",
+        "type": "Hackathon Project",
+        "url": "/work/med-oclock",
+        "website": "",
+        "skills": [
+            {
+                "frontEnd": [
+                    {
+                        "name": "HTML5",
+                        "skillIcon": "../icons/HTML.svg"
+                    },
+                    {
+                        "name": "CSS3",
+                        "skillIcon": "../icons/CSS.svg"                    
+                    },
+                    {
+                        "name": "Javascript",
+                        "skillIcon": "../icons/JS.svg"
+                    },
+                    {
+                        "name": "ReactJS",
+                        "skillIcon": "../icons/ReactJs.svg"
+                    }
+                ],
+                "backEnd": [
+                    {
+                        "name": "Node",
+                        "skillIcon": "../icons/nodejs.svg"                    
+                    },
+                    {
+                        "name": "Express",
+                        "skillIcon": "../icons/express.svg"                    
+                    },
+                    {
+                        "name": "mySQL",
+                        "skillIcon": "../icons/mysql.svg"                    
+                    }
+                ],
+                "workFlow": [
+                    {
+                        "name": "Agile Methodology - SCRUM",
+                        "skillIcon": "../icons/scrum.svg"                    
+                    },
+                    {
+                        "name": "Git/GitHub",
+                        "skillIcon": "../icons/github.svg"                    
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Vegan Lisbon",
+        "mainImg": "../images/veganlisbon1.png",
+        "secondaryImg": "../images/veganlisbon2.png",
+        "type": "Academic Project",
+        "url": "/work/vegan-lisbon",
+        "website": "https://veganlisbon.github.io/veganlisbon/",
+        "skills": [
+            {
+                "frontEnd": [
+                    {
+                        "name": "HTML5",
+                        "skillIcon": "../icons/HTML.svg"
+                    },
+                    {
+                        "name": "CSS3",
+                        "skillIcon": "../icons/CSS.svg"                    
+                    },
+                    {
+                        "name": "Javascript",
+                        "skillIcon": "../icons/JS.svg"
+                    }
+                ],
+                "backEnd": [],
+                "workFlow": [
+                    {
+                        "name": "Agile Methodology - SCRUM",
+                        "skillIcon": "../icons/scrum.svg"                    },
+                    {
+                        "name": "Git/GitHub",
+                        "skillIcon": "../icons/github.svg"                    },
+                    {
+                        "name": "Figma",
+                        "skillIcon": "../icons/figma.svg"                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Beach Obsurfer",
+        "mainImg": "../images/beach-obsurfer.png",
+        "secondaryImg": "",
+        "type": "Hackathon Project",
+        "url": "/work/beach-obsurfer",
+        "website": "https://heuristic-babbage-442cdb.netlify.app/",
+        "skills": [
+            {
+                "frontEnd": [
+                    {
+                        "name": "HTML5",
+                        "skillIcon": "../icons/HTML.svg"
+                    },
+                    {
+                        "name": "CSS3",
+                        "skillIcon": "../icons/CSS.svg"                    },
+                    {
+                        "name": "Javascript",
+                        "skillIcon": "../icons/JS.svg"
+                    }
+                ],
+                "backEnd": [],
+                "workFlow": [
+                    {
+                        "name": "Agile Methodology - SCRUM",
+                        "skillIcon": "../icons/scrum.svg"                    },
+                    {
+                        "name": "Git/GitHub",
+                        "skillIcon": "../icons/github.svg"                    },
+                    {
+                        "name": "Figma",
+                        "skillIcon": "../icons/figma.svg"                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Get my recipe",
+        "mainImg": "../images/getmyrecipe.png",
+        "secondaryImg": "",
+        "url": "/work/get-my-recipe",
+        "website": "",
+        "skills": [
+            {
+                "frontEnd": [
+                    {
+                        "name": "HTML5",
+                        "skillIcon": "../icons/HTML.svg"
+                    },
+                    {
+                        "name": "CSS3",
+                        "skillIcon": "../icons/CSS.svg"                    
+                    },
+                    {
+                        "name": "Javascript",
+                        "skillIcon": "../icons/JS.svg"
+                    }
+                ],
+                "backEnd": [
+                    {
+                        "name": "Node",
+                        "skillIcon": "../icons/nodejs.svg"                    
+                    }
+                ],
+                "workFlow": [
+                    {
+                        "name": "Agile Methodology - SCRUM",
+                        "skillIcon": "../icons/scrum.svg"                    
+                    },
+                    {
+                        "name": "Git/GitHub",
+                        "skillIcon": "../icons/github.svg"                    
+                    }
+                ]
+            }
+        ]
+    }
+]

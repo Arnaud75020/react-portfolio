@@ -32,6 +32,10 @@ const StyledNav = styled.nav`
     a {
         color: white;
         text-decoration: none;
+        &:hover{
+            color: #23d997;
+        }
+        transition: 0.4s ease; 
     }
     ul {
         display: flex;
