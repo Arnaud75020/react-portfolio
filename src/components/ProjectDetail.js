@@ -1,28 +1,50 @@
 import React, {useEffect, useState} from 'react';
-import {useHistory, Link} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 
 const ProjectDetail = ({projects, fetchProjects}) => {
 
-    console.log(projects)
-
     const history = useHistory();
     const url = history.location.pathname;
     const [project, setProject] = useState(null);
-
-
+    const [index, setIndex] = useState();
+    
     useEffect(() => {
-    fetchProjects()
-      const currentProject = projects.find((stateProject) => stateProject.url === url);
-      setProject(currentProject);
-      console.log('project', project);
-    }, [projects, url, project, fetchProjects])
+        const currentProject = projects.find((stateProject) => stateProject.url === url);
+        setProject(currentProject);
+        const currentIndex = projects.findIndex((stateProject) => stateProject.url === url);
+        setIndex(currentIndex)
+    }, [])
+
+    const projectHandler = (direction) => {
+        if(direction === 'skip-back') {
+            const newIndex = index - 1
+            setIndex(newIndex)
+            setProject(projects[newIndex]);
+        }
+        if(direction === 'skip-forward') {
+            const newIndex = index + 1
+            setIndex(newIndex)
+            setProject(projects[newIndex]);
+        }
+
+    }
 
     return ( 
         <div> 
             <>
             {project && (
             <Details>
+                <Arrows>
+                    { index === 0 ? '' : 
+                    <FontAwesomeIcon onClick={() => projectHandler('skip-back')} className="skip-back" size="2x" icon={faAngleLeft} /> 
+                    }
+                    { index === projects.length - 1 ? '' : 
+                    <FontAwesomeIcon onClick={() => projectHandler('skip-forward')} className="skip-forward" size="2x" icon={faAngleRight} />
+                    }
+                </Arrows>
                 <HeadLine>
                     <ProjectSpec>
                         <h2>{project.name}</h2>
@@ -92,15 +114,52 @@ const ProjectDetail = ({projects, fetchProjects}) => {
 }
 
 const Details = styled.div`
+    position: relative;
     color: white;
     display: flex;
     flex-direction: column;
     overflow: hidden;
 `;
 
+const Arrows = styled.div`
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .skip-back{
+        position: absolute;
+        left: 0;
+        opacity: .6;
+        color: white;
+        transition: all 0.5s ease;
+        &:hover{
+            color: #23d997;
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+    .skip-forward{
+        position: absolute;
+        right: 0;
+        opacity: .6;
+        color: white;
+        transition: all 0.5s ease;
+        &:hover{
+            color: #23d997;
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+`;
+
 const HeadLine = styled.div`
     margin: 0rem 5rem;
-    padding-top: 10vh;
+    padding-top: 8vh;
     justify-content: center;
     .headsection-line {
         background: #cccccc;
@@ -118,7 +177,7 @@ const ProjectSpec = styled.div`
     font-size: 1.9rem;
     }
     h5 {
-    font-style: italic;
+    font-family: 'Inter', sans serif;
     font-weight: lighter;
     font-size: 1rem;
     }
