@@ -4,12 +4,15 @@ import HomePage from './Pages/HomePage';
 import Nav from './components/Nav';
 import ContactMe from './Pages/ContactMe';
 import MyWork from './Pages/MyWork';
-import ProjectDetail from './components/ProjectDetail';
-import { Switch, Route } from 'react-router-dom';
+import ProjectDetail from './Pages/ProjectDetail';
+import { Switch, Route, useLocation } from 'react-router-dom';
 import axios from 'axios';
+import { AnimatePresence } from 'framer-motion';
 
 
 const App = () => {
+
+  const location = useLocation();
 
   const [projects, setProjects] = useState([]);  
   
@@ -28,7 +31,8 @@ const App = () => {
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <Switch>
+      <AnimatePresence exitBeforeEnter>
+      <Switch location={location} key={location.pathname}>
         <Route path="/" exact>
           <HomePage />
         </Route>
@@ -42,6 +46,7 @@ const App = () => {
           <ProjectDetail fetchProjects={fetchProjects} projects={projects}/>
         </Route>
       </Switch>
+      </AnimatePresence>
     </div>
   );
 }

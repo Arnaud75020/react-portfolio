@@ -3,6 +3,8 @@ import {useHistory} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
 
 const ProjectDetail = ({projects, fetchProjects}) => {
 
@@ -36,7 +38,7 @@ const ProjectDetail = ({projects, fetchProjects}) => {
         <div> 
             <>
             {project && (
-            <Details>
+            <Details exit="exit" variants={pageAnimation} initial="hidden" animate="show">
                 <Arrows>
                     { index === 0 ? '' : 
                     <FontAwesomeIcon onClick={() => projectHandler('skip-back')} className="skip-back" size="2x" icon={faAngleLeft} /> 
@@ -120,7 +122,7 @@ const ProjectDetail = ({projects, fetchProjects}) => {
      )
 }
 
-const Details = styled.div`
+const Details = styled(motion.div)`
     position: relative;
     color: white;
     display: flex;
@@ -140,7 +142,7 @@ const Arrows = styled.div`
     align-items: center;
     .skip-back{
         position: absolute;
-        left: 0;
+        left: 1%;
         opacity: .6;
         color: white;
         transition: all 0.5s ease;
@@ -152,7 +154,7 @@ const Arrows = styled.div`
     }
     .skip-forward{
         position: absolute;
-        right: 0;
+        right: 1%;
         opacity: .6;
         color: white;
         transition: all 0.5s ease;

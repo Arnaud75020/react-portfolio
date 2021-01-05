@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import {Link} from 'react-router-dom'; 
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { pageAnimation } from '../animation';
 
 
 const MyWork = ({projects, fetchProjects}) => {
@@ -10,7 +12,7 @@ const MyWork = ({projects, fetchProjects}) => {
           }, [fetchProjects])
 
     return ( 
-        <Work>
+        <Work style={{background: "#fff"}} variants={pageAnimation} initial="hidden" animate="show" exit="exit">
             {projects &&
             projects.map(project => {
                 return(
@@ -27,8 +29,7 @@ const MyWork = ({projects, fetchProjects}) => {
      );
 }
 
-const Work = styled.div`
-    background: white;
+const Work = styled (motion.div)`
     min-height: 100vh;
     overflow: hidden;
     padding: 5rem 10rem; 
