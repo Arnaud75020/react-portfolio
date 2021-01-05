@@ -3,6 +3,7 @@ import Arnaud from '../assets/images/Arnaud.jpg';
 import {About, Description, Hide, Image} from '../styles';
 import { motion } from "framer-motion";
 import { titleAnimation, fade, photoAnimation } from "../animation";
+import Wave from './Wave';
 
 const AboutSection = () => {
 
@@ -26,6 +27,7 @@ const AboutSection = () => {
             <Image>
                 <motion.img variants={photoAnimation} src={Arnaud} alt="id"/>
             </Image>
+            <Wave/>
         </About>
      );
 }
