@@ -90,20 +90,27 @@ const ProjectDetail = ({projects, fetchProjects}) => {
                     </Skills>
                     <SkillImg>
                             <div className="img-wraper">
-                            {project.website ?
-                                <div className="imgHover">
-                                <a target="_blank" rel="noreferrer" href={project.website}>
-                                    <img src={project.mainImg} alt="project" id="imgLink"/>
-                                    <div className="overlay">
-                                        <p className="textImg">Visit the website</p>
+                                <img src={project.mainImg} alt="project"/>
+                                <div className="overlay">
+                                    <div className="description">
+                                        <h3>Description</h3>
+                                        <div className="skillsection-line"></div>
+                                        <p>{project.description}</p>
                                     </div>
-                                </a>
-                                </div>
-                                :
-                                <img src={project.mainImg} alt="project" id="imgNoLink"/>
-                                }
+                                    <div className="links">
+                                        <a target="_blank" rel="noreferrer" href={project.github}>
+                                            <button className="github">Visit GitHub</button>
+                                        </a>
+                                        {project.website ?
+                                        <a target="_blank" rel="noreferrer" href={project.website}>
+                                            <button className="textImg">Visit website</button>
+                                        </a>
+                                        :
+                                        ''
+                                        }
+                                    </div>
+                                </div> 
                             </div>
-                        
                     </SkillImg>
                 </ProjectBody>
             </Details>
@@ -174,12 +181,12 @@ const ProjectSpec = styled.div`
     align-items: center;
     justify-content: space-between;
     h2 {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     }
     h5 {
     font-family: 'Inter', sans serif;
     font-weight: lighter;
-    font-size: 1rem;
+    font-size: .9rem;
     }
 `;
 
@@ -195,6 +202,9 @@ const Skills = styled.div`
     flex-wrap: wrap;
     width: 35%;
     max-height:28rem;
+    h3 {
+        font-size: 1rem;
+    }
     .skill-list-wrapper {
         padding-right: 40px;
     }
@@ -204,7 +214,6 @@ const Skills = styled.div`
         margin: 0.1rem 0rem 1.5rem 0rem;
         width: 4rem;
     }
-
 `;
 
 const SkillImg = styled.div`
@@ -216,26 +225,29 @@ const SkillImg = styled.div`
         min-height: 60vh;
         display:flex;
         align-items:center;
+        overflow: hidden;
         img {
             position: absolute;
             width: 100%;
             height: auto;
-            overflow: auto;
         }
-        a {
-            display:flex;
-            align-items:center;
-        }
-        .imgNoLink{
-            cursor: none;
-        }
-        .textImg {
-            color: #23d997;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
+        .links {
+            padding: 5rem;
+            display: flex;
+            justify-content: space-around;
+            button {
+                font-weight: lighter;
+                font-size: .8rem;
+                padding: .5rem 1rem;
+                border: 1px solid #23d997;
+            }
+            h3 {
+                font-size: 1rem;
+                transition: 0.3s ease;
+            &:hover {
+                color: #23d997;
+                }
+            }
         }
         .overlay {
             position: absolute;
@@ -247,12 +259,23 @@ const SkillImg = styled.div`
             width: 100%;
             opacity: 0;
             transition: opacity 0.3s ease;
-            background-color: #282828;
+            background-color: #1b1b1b;
+            .skillsection-line{
+                background: #23d997;
+                height: 0.2rem;
+                margin: 0.1rem 0rem 1.5rem 0rem;
+                width: 4rem;
+            }
+            .description{
+                padding: 0rem 5rem;
+                p {
+                    padding: 0rem;
+                }
+            }
         }
         
-        .imgHover:hover .overlay{
+        &:hover .overlay{
             opacity: 1;
-            cursor: pointer;
         }
     }
 `;
@@ -263,6 +286,7 @@ const SkillStyle = styled.div`
     margin-bottom: 0.2rem;
     padding-right: 20px;
     h5 {
+        font-size: .6rem;
         padding: 0.2rem;
         color: black;
         background: white;

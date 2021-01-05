@@ -3,9 +3,11 @@
         "name": "Music Player",
         "mainImg": "../images/music-player.png",
         "secondaryImg": "",
-        "type": "Personal Project",
+        "type": "Personal Project - December 2020",
         "url": "/work/music-player",
         "website": "https://react-music-player-mocha.vercel.app/",
+        "description":"Fun web application to build to bring together 2 hobbies - code and music",
+        "github": "https://github.com/Arnaud75020/react-music-player",
         "skills": [
             {
                 "frontEnd": [
@@ -40,8 +42,10 @@
         "name": "Productized - Event Manager",
         "mainImg": "../images/productized.png",
         "secondaryImg": "",
-        "type": "Academic Project",
+        "type": "Client Academic Project - July 2020",
         "url": "/work/productized",
+        "description":"Web Application for Lisbon based Productized, events organizer to manage and its conferences with 3 different types of users and a third part system for ticket booking",
+        "github":"https://github.com/Productized",
         "website": "",
         "skills": [
             {
@@ -94,12 +98,14 @@
         ]
     },
     {
-        "name": "Med Oclock",
+        "name": "Med Oclock - Medication Reminder",
         "mainImg": "../images/med-oclock1.png",
         "secondaryImg": "../images/med-oclock2.png",
-        "type": "Hackathon Project",
+        "type": "Doctolib 3 Days Hackathon - June 2020",
         "url": "/work/med-oclock",
         "website": "",
+        "description":"This was our full stack project in our participation to the 3 days hackathon organized by famous french company Doctolib. Our idea is to provide the users a solution to plan their medication by setting it up in a calendar and getting notifications. The project is fully working, it’s a React JS app, working with an express server. Notifications are by email for the purpose of the project.",
+        "github": "https://github.com/Doctolib-Hackathon-LX-1/medication-reminder/tree/dev",
         "skills": [
             {
                 "frontEnd": [
@@ -151,9 +157,11 @@
         "name": "Vegan Lisbon",
         "mainImg": "../images/veganlisbon1.png",
         "secondaryImg": "../images/veganlisbon2.png",
-        "type": "Academic Project",
+        "type": "Academic Project - April 2020",
         "url": "/work/vegan-lisbon",
         "website": "https://veganlisbon.github.io/veganlisbon/",
+        "github": "https://github.com/veganlisbon/veganlisbon",
+        "description": "Vegan Lisbon is a three-days group project developed remotely during the Web Development course at Wild Code School – Lisbon by Arnaud Duhé, Fernanda Abbud, Filipa Marta.",
         "skills": [
             {
                 "frontEnd": [
@@ -189,9 +197,11 @@
         "name": "Beach Obsurfer",
         "mainImg": "../images/beach-obsurfer.png",
         "secondaryImg": "",
-        "type": "Hackathon Project",
+        "type": "24 Hours Hackathon - May 2020",
         "url": "/work/beach-obsurfer",
         "website": "https://heuristic-babbage-442cdb.netlify.app/",
+        "description":"A 28h Hackathon project developed remotely during the Web Development course at Wild Code School – Lisbon by Arnaud Duhé, Filipa Marta and Isadora Hillebrand.",
+        "github": "https://github.com/beach-obsurfer/beach-obsurfer/tree/develop",
         "skills": [
             {
                 "frontEnd": [
@@ -226,8 +236,11 @@
         "name": "Get my recipe",
         "mainImg": "../images/getmyrecipe.png",
         "secondaryImg": "",
+        "type":"Academic Project - April 2020",
         "url": "/work/get-my-recipe",
         "website": "",
+        "description": "The goal was to build a dynamic webapp that used data comes from an API. In the context of COVID19, the idea is to provide users with ideas of recipes to cook home, and bring variety in every day meal cooked based on what ingredients users already have.",
+        "github": "https://github.com/get-my-recipe/get-my-recipe/tree/deployment",
         "skills": [
             {
                 "frontEnd": [
