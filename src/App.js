@@ -13,8 +13,7 @@ import { AnimatePresence } from 'framer-motion';
 const App = () => {
 
   const location = useLocation();
-
-  const [projects, setProjects] = useState([]);  
+  const [projects, setProjects] = useState([]);   
   
   const fetchProjects = () => {
     axios.get('./data.json')
@@ -22,10 +21,6 @@ const App = () => {
       const projects = res.data
       setProjects(projects)}) 
   }
-
-  useEffect(() => {
-    fetchProjects();
-      }, [])
 
   return (
     <div className="App">
@@ -38,13 +33,13 @@ const App = () => {
         </Route>
         <Route path="/work" exact>
           <MyWork fetchProjects={fetchProjects} projects={projects}/> 
+        </Route>
+        <Route path="/work/:url">
+          <ProjectDetail fetchProjects={fetchProjects} projects={projects}/>
         </Route> 
         <Route path="/contact">
           <ContactMe />
         </Route> 
-        <Route path="/work/:url">
-          <ProjectDetail fetchProjects={fetchProjects} projects={projects}/>
-        </Route>
       </Switch>
       </AnimatePresence>
     </div>

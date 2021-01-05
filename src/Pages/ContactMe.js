@@ -7,7 +7,7 @@ const ContactMe = () => {
         <motion.div style={{background: "#fff"}} exit="exit" variants={pageAnimation} initial="hidden" animate="show">
             <h1>Contact Me</h1>
         </motion.div>
-     );
+    );
 }
  
 export default ContactMe;

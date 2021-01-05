@@ -1,27 +1,30 @@
 import React from 'react';
 import Arnaud from '../assets/images/Arnaud.jpg';
 import {About, Description, Hide, Image} from '../styles';
+import { motion } from "framer-motion";
+import { titleAnimation, fade, photoAnimation } from "../animation";
 
 const AboutSection = () => {
+
     return ( 
         <About>
             <Description>
-                <div className="title">
+                <motion.div >
                     <Hide>
-                        <h2>Welcome,</h2>
+                        <motion.h2 variants={titleAnimation} >Welcome,</motion.h2>
                     </Hide>
                     <Hide>
-                        <h2>My name is <span>Arnaud</span>,</h2>
+                        <motion.h2 variants={titleAnimation} >My name is <span>Arnaud</span>,</motion.h2>
                     </Hide>
                     <Hide>
-                        <h2>I'm a <span>W</span><span>e</span><span>b</span><span> </span><span>Developer</span>.</h2>
+                        <motion.h2 variants={titleAnimation}>I'm a <span>W</span><span>e</span><span>b</span><span> </span><span>Developer</span>.</motion.h2>
                     </Hide>
-                </div>
-                <p>Contact me for project inquiry</p>
-                <button>Contact me</button>
+                </motion.div>
+                <motion.p variants={fade}>Contact me for project inquiry</motion.p>
+                <motion.button variants={fade}>Contact me</motion.button>
             </Description>
             <Image>
-                <img src={Arnaud} alt="blue sky"/>
+                <motion.img variants={photoAnimation} src={Arnaud} alt="id"/>
             </Image>
         </About>
      );

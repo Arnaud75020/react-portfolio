@@ -9,7 +9,7 @@ const MyWork = ({projects, fetchProjects}) => {
 
     useEffect(() => {
         fetchProjects();
-          }, [fetchProjects])
+          }, [])
 
     return ( 
         <Work style={{background: "#fff"}} variants={pageAnimation} initial="hidden" animate="show" exit="exit">
