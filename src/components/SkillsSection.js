@@ -12,10 +12,15 @@ import scrum from '../assets/icons/scrum.svg';
 import express from '../assets/icons/express.svg';
 import styledc from '../assets/icons/styledc.png';
 import { Description, Image, Skills, Cards, CardList, Card} from '../styles';
+import {useScroll} from './useScroll';
+import { scrollReveal } from '../animation';
 
 const SkillsSection = () => {
+
+    const [element, controls] = useScroll();
+
     return ( 
-        <Skills>
+        <Skills variants={scrollReveal} animate={controls} ref={element}>
             <Description>
                 <h2>My <span>Skills</span></h2>
                 <Cards>

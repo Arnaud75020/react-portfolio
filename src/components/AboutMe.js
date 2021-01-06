@@ -3,10 +3,17 @@ import styled from 'styled-components';
 import {About} from '../styles';
 import Toggle from './Toggle';
 import { AnimateSharedLayout } from 'framer-motion';
+import {useScroll} from './useScroll';
+import { scrollReveal } from '../animation';
+
+
 
 const AboutMe = () => {
+
+    const [element, controls] = useScroll();
+
     return ( 
-        <Aboutme className="aboutme">
+        <Aboutme variants={scrollReveal} ref={element} animate={controls} className="aboutme">
             <h2>About <span>me</span></h2>
             <AnimateSharedLayout>
             <Toggle title='Who I am'>
