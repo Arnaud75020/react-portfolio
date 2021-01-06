@@ -14,7 +14,6 @@ export const pageAnimation = {
     },
     exit: {
         opacity: 0,
-        y: 300,
         transition: {
             duration: 0.5,
         },
@@ -28,7 +27,7 @@ export const titleAnimation = {
     show: {
         y: 0,
         transition: {
-            duration: .75, 
+            duration: .5, 
             ease: "easeOut",
         },
     },
@@ -54,6 +53,14 @@ export const photoAnimation = {
             ease: "easeOut",
             duration: 0.75,
         }
+    }
+};
+
+export const lineAnimation = {
+    hidden: {width: "0%"},
+    show: {
+        width: "100%",
+        duration:1,
     }
 }
 

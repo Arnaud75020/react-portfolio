@@ -1,12 +1,16 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useContext} from 'react';
 import {useHistory} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { pageAnimation } from '../animation';
+import { pageAnimation,photoAnimation, fade, lineAnimation } from '../animation';
+import {ProjectContext} from '../ProjectContext';
 
-const ProjectDetail = ({projects, fetchProjects}) => {
+
+const ProjectDetail = () => {
+
+    const [projects] = useContext(ProjectContext);
 
     const history = useHistory();
     const url = history.location.pathname;
@@ -49,10 +53,10 @@ const ProjectDetail = ({projects, fetchProjects}) => {
                 </Arrows>
                 <HeadLine>
                     <ProjectSpec>
-                        <h2>{project.name}</h2>
+                        <motion.h2 variants={fade}>{project.name}</motion.h2>
                         <h5><span>&lt;/ </span>{project.type}<span> &gt;</span></h5>
                     </ProjectSpec>
-                    <div className="headsection-line"></div>
+                    <motion.div variants={lineAnimation}className="headsection-line"></motion.div>
                 </HeadLine>
                 <ProjectBody>
                     <Skills>
@@ -92,7 +96,7 @@ const ProjectDetail = ({projects, fetchProjects}) => {
                     </Skills>
                     <SkillImg>
                             <div className="img-wraper">
-                                <img src={project.mainImg} alt="project"/>
+                                <motion.img variants={photoAnimation}src={project.mainImg} alt="project"/>
                                 <div className="overlay">
                                     <div className="description">
                                         <h3>Description</h3>
