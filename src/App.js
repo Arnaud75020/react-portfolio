@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import GlobalStyle from './components/GlobalStyle';
 import HomePage from './Pages/HomePage';
 import Nav from './components/Nav';
@@ -6,23 +6,16 @@ import ContactMe from './Pages/ContactMe';
 import MyWork from './Pages/MyWork';
 import ProjectDetail from './Pages/ProjectDetail';
 import { Switch, Route, useLocation } from 'react-router-dom';
-import axios from 'axios';
 import { AnimatePresence } from 'framer-motion';
+import {ProjectProvider} from './ProjectContext';
 
 
 const App = () => {
 
   const location = useLocation();
-  const [projects, setProjects] = useState([]);   
-  
-  const fetchProjects = () => {
-    axios.get('./data.json')
-    .then(res => {
-      const projects = res.data
-      setProjects(projects)}) 
-  }
 
   return (
+    <ProjectProvider>
     <div className="App">
       <GlobalStyle />
       <Nav />
@@ -32,10 +25,10 @@ const App = () => {
           <HomePage />
         </Route>
         <Route path="/work" exact>
-          <MyWork fetchProjects={fetchProjects} projects={projects}/> 
+          <MyWork /> 
         </Route>
         <Route path="/work/:url">
-          <ProjectDetail fetchProjects={fetchProjects} projects={projects}/>
+          <ProjectDetail />
         </Route> 
         <Route path="/contact">
           <ContactMe />
@@ -43,6 +36,7 @@ const App = () => {
       </Switch>
       </AnimatePresence>
     </div>
+    </ProjectProvider>
   );
 }
 

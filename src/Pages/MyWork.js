@@ -1,15 +1,14 @@
-import React, {useEffect} from 'react';
+import React, {useContext} from 'react';
 import {Link} from 'react-router-dom'; 
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { pageAnimation, photoAnimation, fade, lineAnimation } from '../animation';
+import {ProjectContext} from '../ProjectContext';
 
 
-const MyWork = ({projects, fetchProjects}) => {
+const MyWork = () => {
 
-    useEffect(() => {
-        fetchProjects();
-          }, [])
+    const [projects] = useContext(ProjectContext);
 
     return ( 
         <Work style={{background: "#fff"}} variants={pageAnimation} initial="hidden" animate="show" exit="exit">
