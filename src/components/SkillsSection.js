@@ -102,6 +102,16 @@ const SkillsSection = () => {
                     <div className="skillsection-line"></div>
                         <Card>
                             <div className="icon">
+                                <h5>WordPress</h5>
+                            </div>
+                        </Card> 
+                        <Card>
+                            <div className="icon">
+                                <h5>Framer motion</h5>
+                            </div>
+                        </Card>  
+                        <Card>
+                            <div className="icon">
                                 <h5>Apollo & GraphQL</h5>
                             </div>
                         </Card>                    

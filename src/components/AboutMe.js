@@ -1,39 +1,36 @@
 import React from 'react';
 import styled from 'styled-components';
 import {About} from '../styles';
+import Toggle from './Toggle';
+import { AnimateSharedLayout } from 'framer-motion';
 
 const AboutMe = () => {
     return ( 
         <Aboutme className="aboutme">
             <h2>About <span>me</span></h2>
-            <div className="question">
-                <h3>How did I start</h3>
-                <div className="answer">
-                    <p>I decided to change career in the late 2019 and enrolled an intense 5 months fullstack bootcamp in march 2020 in Wild Code School Lisbon to fully commit in the Web Development field.</p>
-                </div>
-                <div className="aboutme-line"></div>
-            </div>
-            <div className="question">
-                <h3>Dealy Schedule</h3>
-                <div className="answer">
-                    <p>My story</p>
-                </div>
-                <div className="aboutme-line"></div>
-            </div>
-            <div className="question">
-                <h3>How to work with me</h3>
-                <div className="answer">
-                    <p>My story</p>
-                </div>
-                <div className="aboutme-line"></div>
-            </div>
-            <div className="question">
-                <h3>What I like</h3>
-                <div className="answer">
-                    <p>My story</p>
-                </div>
-                <div className="aboutme-line"></div>
-            </div>
+            <AnimateSharedLayout>
+            <Toggle title='Who I am'>
+                    <div className="answer">
+                        <p>I'm a french citizen, born and raised in beautiful but rainy Normandie in France !</p>
+                    </div>
+                </Toggle>
+                <Toggle title='How and when did I start Web Development'>
+                    <div className="answer">
+                        <p>After 8 years working in the TV show production field in Paris, I decided it was the time to change career and that's how I enrolled in an intense 5 months fullstack bootcamp in march 2020 at Wild Code School Lisbon to specialize myself in Javascirpt and ReactJS.</p>
+                    </div>
+                </Toggle>
+                <Toggle title='How to work with me'>
+                    <div className="answer">
+                        <p>Wether you need a full-time on-site or remote web developer or build your App, I'm always in for new challenges, so reach out to me in the contact page !</p>
+                    </div>
+                </Toggle>
+                <Toggle title='What I like'>
+                    <div className="answer">
+                        <p>Outdoor enthusiast, if I'm not working, you can often see me on a paragliding take-off, by the ocean or a lake, trying to surf or kite-surf.  </p>
+                        <p>I find interest and joy in discovering, could it either be in my own capacity pushing my limits to always longer triathlon and running experiences, or just travelling, either with my paraglider or on my bike.</p>
+                    </div>
+                </Toggle>
+            </AnimateSharedLayout>
         </Aboutme>
      );
 }
@@ -54,11 +51,11 @@ const Aboutme = styled(About)`
         width: 100%;
     }
     .question {
-        padding: 3rem 0rem;
+        padding: 0.3rem 0rem;
         cursor: pointer;
     }
     .answer {
-        padding: 2rem 0rem;
+        padding: 0rem;
         p {
             padding: 1rem 0rem;
         }
