@@ -10,7 +10,7 @@ const HomePage = () => {
     return ( 
         <motion.div exit="exit" variants={pageAnimation} initial="hidden" animate="show" >
             <AboutSection />
-            <SkillsSection />
+            <SkillsSection/>
             <AboutMe />
         </motion.div>
      );

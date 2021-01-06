@@ -3,6 +3,7 @@ import Arnaud from '../assets/images/Arnaud.jpg';
 import {About, Description, Hide, Image} from '../styles';
 import { motion } from "framer-motion";
 import { titleAnimation, fade, photoAnimation } from "../animation";
+import {Link} from 'react-router-dom';
 import Wave from './Wave';
 
 const AboutSection = () => {
@@ -22,7 +23,9 @@ const AboutSection = () => {
                     </Hide>
                 </motion.div>
                 <motion.p variants={fade}>Contact me for project inquiry</motion.p>
+                <Link to="/contact">
                 <motion.button variants={fade}>Contact me</motion.button>
+                </Link>
             </Description>
             <Image>
                 <motion.img variants={photoAnimation} src={Arnaud} alt="id"/>

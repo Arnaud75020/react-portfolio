@@ -10,6 +10,7 @@ const MyWork = () => {
 
     const [projects] = useContext(ProjectContext);
 
+
     return ( 
         <Work style={{background: "#fff"}} variants={pageAnimation} initial="hidden" animate="show" exit="exit">
             <motion.div variants={sliderContainer}>
@@ -44,7 +45,7 @@ const Work = styled (motion.div)`
         padding: 1rem 0rem;
     }
 `;
-const Project = styled.div`
+const Project = styled(motion.div)`
     padding-bottom: 10rem;
     .line {
         height: 0.4rem;
