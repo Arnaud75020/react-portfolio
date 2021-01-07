@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import { titleAnimation, fade, photoAnimation } from "../animation";
 import {Link} from 'react-router-dom';
 import Wave from './Wave';
+import { HashLink } from 'react-router-hash-link';
+
 
 const AboutSection = () => {
 
@@ -23,9 +25,14 @@ const AboutSection = () => {
                     </Hide>
                 </motion.div>
                 <motion.p variants={fade}>Contact me for project inquiry</motion.p>
-                <Link to="/contact">
-                <motion.button variants={fade}>Contact me</motion.button>
-                </Link>
+                <div className="button-wrapper">
+                    <Link to="/contact">
+                    <motion.button variants={fade}>Contact me</motion.button>
+                    </Link>
+                    <HashLink smooth to="/#mySkills">
+                    <motion.button variants={fade}>My Skills</motion.button>
+                    </HashLink>
+                </div>
             </Description>
             <Image>
                 <motion.img variants={photoAnimation} src={Arnaud} alt="id"/>

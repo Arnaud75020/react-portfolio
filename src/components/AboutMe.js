@@ -14,7 +14,7 @@ const AboutMe = () => {
 
     return ( 
         <Aboutme variants={scrollReveal} ref={element} animate={controls} className="aboutme">
-            <h2>About <span>me</span></h2>
+            <h2  id={'aboutMe'} >About <span>me</span></h2>
             <AnimateSharedLayout>
             <Toggle title='Who I am'>
                     <div className="answer">
@@ -46,8 +46,12 @@ const Aboutme = styled(About)`
     display: block;
     span {
         display: block;
+        @media (max-width: 1200px) {
+            display: inline;
+        }
     }
     h2 {
+        padding-top: 3rem;
         padding-bottom: 2rem;
         font-weight: lighter;
     }

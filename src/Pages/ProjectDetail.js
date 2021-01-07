@@ -201,6 +201,11 @@ const ProjectBody = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 2rem 5rem 0rem 5rem;
+    @media (max-width: 1200px) {
+        padding: 2rem 2rem;
+        display: block;
+        justify-content: center;
+    }
 `;
 
 const Skills = styled.div`
@@ -220,6 +225,11 @@ const Skills = styled.div`
         margin: 0.1rem 0rem 1.5rem 0rem;
         width: 4rem;
     }
+    @media (max-width: 1200px) {
+        width: 100%;
+        justify-content: center;
+        padding: 2rem 2rem;
+    }
 `;
 
 const SkillImg = styled.div`
@@ -228,12 +238,11 @@ const SkillImg = styled.div`
         background: #282828;
         position: relative;
         width:100%;
-        min-height: 60vh;
+        height: auto;
         display:flex;
         align-items:center;
         overflow: hidden;
         img {
-            position: absolute;
             width: 100%;
             height: auto;
         }
@@ -283,6 +292,11 @@ const SkillImg = styled.div`
         &:hover .overlay{
             opacity: 1;
         }
+    }
+    @media (max-width: 1200px) {
+        width: 100%;
+        justify-content: center;
+        padding: 2rem 2rem;
     }
 `;
 

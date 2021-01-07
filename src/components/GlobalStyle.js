@@ -8,9 +8,19 @@ const GlobalStyle  = createGlobalStyle`
         box-sizing: border-box;
     }
 
+    html{
+        @media (max-width: 1200px) {
+            font-size: 80%;
+        }
+        @media (max-width: 1200px) {
+            font-size: 70%;
+        }
+    }
+
     body {
         background: #1b1b1b;
         font-family: 'Inter', sans serif;
+        overflow-x: hidden;
     }
 
     button {
@@ -27,6 +37,9 @@ const GlobalStyle  = createGlobalStyle`
             background-color: #23d997;
             color: white;
         }
+        @media (max-width: 500px) {
+            margin-top: 2rem;
+            }
     }
     h2 {
         font-weight: lighter;

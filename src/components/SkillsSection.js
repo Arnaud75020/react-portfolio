@@ -22,7 +22,7 @@ const SkillsSection = () => {
     return ( 
         <Skills variants={scrollReveal} animate={controls} ref={element}>
             <Description>
-                <h2>My <span>Skills</span></h2>
+                <h2 id="mySkills">My <span>Skills</span></h2>
                 <Cards>
                     <CardList>
                     <h3>Front End</h3>
@@ -118,11 +118,6 @@ const SkillsSection = () => {
                         <Card>
                             <div className="icon">
                                 <h5>Apollo & GraphQL</h5>
-                            </div>
-                        </Card>                    
-                        <Card>
-                            <div className="icon">
-                                <h5>NPM</h5>
                             </div>
                         </Card>                    
                         <Card>

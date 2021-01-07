@@ -8,6 +8,11 @@ export const About = styled(motion.div)`
     justify-content: space-between;
     padding: 5rem 5rem 5rem 10rem;
     color: white;
+    @media (max-width: 1200px) {
+            display: block;
+            padding: 2rem;
+            text-align: center;
+        }
 `;
 
 export const Description = styled.div`
@@ -17,17 +22,38 @@ export const Description = styled.div`
     h2 {
         font-weight: lighter;
     }
+    .button-wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    @media (max-width: 1200px) {
+            padding: 3rem;
+            .button-wrapper{
+            @media (max-width: 1200px) {
+                justify-content: space-evenly;
+                text-align: center;
+            }
+            @media (max-width: 1200px) {
+                padding: 3rem;
+            }
+            @media (max-width: 500px) {
+            flex-direction: column;
+            }
+        }
+            }
+    }
 `;
 
 export const Image = styled.div`
     flex: 1;
     overflow: hidden;
     z-index: 2; 
+    display:flex;
+    justify-content: center;
     img {
         width: 70%;
         height: 60vh;
-        object-fit: cover;
-
+        object-fit: scale-down;
     }
 `;
 
@@ -49,11 +75,15 @@ export const Skills = styled(About)`
         width: 20px;
         height: 20px;
     }
+
 `; 
 
 export const Cards = styled.div`
     display: flex;
     flex-wrap: wrap;
+    @media (max-width: 1200px) {
+        justify-content: center;
+        }
 `;
 
 export const CardList = styled.div`
@@ -62,15 +92,17 @@ export const CardList = styled.div`
     flex-direction: column;
     padding-right: 2rem;
     margin-bottom: 1.5rem;
-    h3 {
-        
-        }
     .skillsection-line {
         background: #23d997;
         height: 0.2rem;
         margin: 0.1rem 0rem 1.5rem 0rem;
         width: 40%;
     }
+    @media (max-width: 1200px) {
+        h3 {
+            text-align: left;
+        }
+        }
 
 `;
 

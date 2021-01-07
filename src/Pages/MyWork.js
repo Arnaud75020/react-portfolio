@@ -44,6 +44,15 @@ const Work = styled (motion.div)`
     h2 {
         padding: 1rem 0rem;
     }
+    @media (max-width: 1200px){
+        padding: 2rem 2rem;
+        h2{
+            font-size: 200%;
+        }
+    }
+    @media (max-width: 500px){
+        padding: 2rem 1rem;
+    }
 `;
 const Project = styled(motion.div)`
     padding-bottom: 10rem;
@@ -54,8 +63,11 @@ const Project = styled(motion.div)`
     }
     img {
             width: 100%;
-            height: 70vh;
+            height: auto;
             object-fit: cover;
+            @media (max-width: 1200px){
+                object-fit: scale-down;
+            }
         }
 `;
 
