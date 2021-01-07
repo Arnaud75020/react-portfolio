@@ -31,12 +31,12 @@ const ContactMe = () => {
                         <a target="_blank" rel="noreferrer" href="https://github.com/Arnaud75020">Visit my <span>GitHub</span> account</a>
                     </Social>
                 </Hide>
-                <Hide>
+                {/* <Hide>
                     <Social variants={titleAnimation}>
                         <Circle4/>
                             <a target="_blank" rel="noreferrer" href="https://www.instagram.com/arnaudduhe/?hl=fr">Visit my <span>Instagram</span> profil</a>
                     </Social>
-                </Hide>
+                </Hide> */}
             </div>
         </ContactStyle>
     );
