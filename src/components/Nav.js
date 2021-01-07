@@ -2,9 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import {motion} from 'framer-motion';
+import { useLocation } from "react-router-dom";
 
 
 const Nav = () => {
+
+    const { pathname } = useLocation();
+
     return ( 
         <StyledNav>
             <h1><HashLink 
@@ -17,12 +22,27 @@ const Nav = () => {
             <ul>
                 <li>
                     <HashLink smooth to="/#aboutMe">About me</HashLink>
+                    <Line
+                        transition={{ duration: 0.75 }}
+                        initial={{ width: "0%" }}
+                        animate={{ width: pathname === "/" ? "50%" : "0%" }}
+                    />
                 </li>
                 <li>
                     <Link to="/work" onClick={() =>  window.scroll({top: 0, left: 0,})}>My work</Link>
+                    <Line
+                        transition={{ duration: 0.75 }}
+                        initial={{ width: "0%" }}
+                        animate={{ width: pathname === "/work" ? "50%" : "0%" }}
+                    />
                 </li>
                 <li>
                     <Link to="/contact">Contact me</Link>
+                    <Line
+                        transition={{ duration: 0.75 }}
+                        initial={{ width: "0%" }}
+                        animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
+                    />
                 </li>
             </ul>
         </StyledNav>
@@ -77,6 +97,19 @@ const StyledNav = styled.nav`
             }
         }
     }
+`;
+
+const Line = styled(motion.div)`
+    height: 0.3rem;
+    background: #23d997;
+    width: 5%;
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    width: 0%;
+    @media (max-width: 1200px) {
+    left: 0%;
+  }
 `;
  
 export default Nav;
