@@ -16,7 +16,7 @@ const Nav = () => {
                 id="logo" 
                 to="/" 
                 onClick={() =>  window.scroll({top: 0, left: 0,})}
-                >Portfolio
+                >Arnaud Duhé
                 </HashLink>
             </h1>
             <ul>
@@ -73,9 +73,10 @@ const StyledNav = styled.nav`
         list-style: none;
     }
     #logo {
-        font-size: 1.4rem;
-        font-family: "Lobster", cursive;
-        font-weight: lighter;
+        font-size: 1.2rem;
+        color: #23d997;
+        /* font-family: "Press Start 2P";
+        font-weight: lighter; */
     }
     li {
         padding-left: 5rem;
