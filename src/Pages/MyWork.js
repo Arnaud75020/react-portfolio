@@ -30,6 +30,13 @@ const MyWork = () => {
                             <motion.img variants={photoAnimation} src={project.mainImg} alt={project.name}/>
                         </Hide>
                     </Link>
+                    <Link to={project.url} style={{ textDecoration: 'none' }}>
+                        <Hide>
+                        <button>
+                            Details
+                        </button>
+                        </Hide>
+                    </Link>
                 </Project>
                 )
             })}
@@ -65,8 +72,32 @@ const Project = styled(motion.div)`
             width: 100%;
             height: auto;
             object-fit: cover;
-            @media (max-width: 1200px){
-                object-fit: scale-down;
+            object-fit: scale-down;
+    }
+    button {
+        margin: 1rem auto;
+        color: #23d997;
+        transition: all 0.5s ease;
+        &:hover{
+            background-color: #23d997;
+            color: white;
+        }
+        @media (max-width: 500px) {
+            margin-top: 2rem;
+            }
+
+    }
+    @media (min-width: 1200px) {
+            img:hover {
+                    opacity: 0.7 !important;
+                };
+            button {
+                display: none;
+            }
+        }
+        @media (max-width: 1200px) {
+            button {
+                display: flex;
             }
         }
 `;
