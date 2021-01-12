@@ -43,10 +43,6 @@ const ProjectDetail = () => {
             <>
             {project && (
             <Details exit="exit" variants={pageAnimation} initial="hidden" animate="show">
-                <Arrows>
-
-
-                </Arrows>
                 <HeadLine>
                     <ProjectSpec>
                     { index === 0 ? '' : 
@@ -128,10 +124,6 @@ const ProjectDetail = () => {
 
 const Details = styled(motion.div)`
     color: white;
-`;
-
-const Arrows = styled.div`
-
 `;
 
 const HeadLine = styled.div`
