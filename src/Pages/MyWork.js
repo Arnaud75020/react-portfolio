@@ -31,11 +31,13 @@ const MyWork = () => {
                         </Hide>
                     </Link>
                     <Link to={project.url} style={{ textDecoration: 'none' }}>
-                        <Hide>
-                        <button>
-                            Details
-                        </button>
-                        </Hide>
+                        <motion.div variants={fade} >
+                            <Hide>
+                                <button>
+                                    Details
+                                </button>
+                            </Hide>
+                        </motion.div >
                     </Link>
                 </Project>
                 )
@@ -76,8 +78,12 @@ const Project = styled(motion.div)`
     }
     button {
         margin: 1rem auto;
-        color: #23d997;
-        transition: all 0.5s ease;
+        color: black;
+        font-weight: lighter;
+        font-size: 1rem;
+        padding: .8rem 1rem;
+        border: 2px solid #23d997;
+        transition: all 0.3s ease;
         &:hover{
             background-color: #23d997;
             color: white;
