@@ -1,5 +1,5 @@
 import React, {useEffect, useState, useContext} from 'react';
-import {useHistory} from 'react-router-dom';
+import {useHistory, Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components';
@@ -44,22 +44,41 @@ const ProjectDetail = () => {
             {project && (
             <Details exit="exit" variants={pageAnimation} initial="hidden" animate="show">
                 <Arrows>
-                    { index === 0 ? '' : 
-                    <FontAwesomeIcon onClick={() => projectHandler('skip-back')} className="skip-back" size="2x" icon={faAngleLeft} /> 
-                    }
-                    { index === projects.length - 1 ? '' : 
-                    <FontAwesomeIcon onClick={() => projectHandler('skip-forward')} className="skip-forward" size="2x" icon={faAngleRight} />
-                    }
+
+
                 </Arrows>
                 <HeadLine>
                     <ProjectSpec>
+                    { index === 0 ? '' : 
+                    <FontAwesomeIcon onClick={() => projectHandler('skip-back')} className="skip-back" size="2x" icon={faAngleLeft} /> 
+                    }
                         <motion.h2 variants={fade}>{project.name}</motion.h2>
+                        { index === projects.length - 1 ? '' : 
+                    <FontAwesomeIcon onClick={() => projectHandler('skip-forward')} className="skip-forward" size="2x" icon={faAngleRight} />
+                    }
                         <h5><span>&lt;/ </span>{project.type}<span> &gt;</span></h5>
                     </ProjectSpec>
                     <motion.div variants={lineAnimation}className="headsection-line"></motion.div>
                 </HeadLine>
                 <ProjectBody>
-                    <Skills>
+                    <ProjectHeader>
+                        <h3>Description</h3>
+                        <div className="skillsection-line"></div>
+                        <p>{project.description}</p>
+                    </ProjectHeader>   
+                    <ProjectSkills>
+                        <div className="btns">
+                                <a target="_blank" rel="noreferrer" href={project.github}>
+                                    <button className="link-btn" type="button">GitHub</button>
+                                </a>
+                                {project.website ?
+                                <a target="_blank" rel="noreferrer" href={project.website}>
+                                    <button className="link-btn">Website</button>
+                                </a>
+                                :
+                                ''
+                                }
+                        </div>
                         <div className="skill-list-wrapper">
                             <h3>Front End</h3>
                             <div className="skillsection-line"></div>
@@ -93,29 +112,10 @@ const ProjectDetail = () => {
                             </div>
                         </div>)}
                         </>
-                    </Skills>
+                    </ProjectSkills>
                     <SkillImg>
                             <div className="img-wraper">
                                 <motion.img variants={photoAnimation}src={project.mainImg} alt="project"/>
-                                <div className="overlay">
-                                    <div className="description">
-                                        <h3>Description</h3>
-                                        <div className="skillsection-line"></div>
-                                        <p>{project.description}</p>
-                                    </div>
-                                    <div className="links">
-                                        <a target="_blank" rel="noreferrer" href={project.github}>
-                                            <button className="github">Visit GitHub</button>
-                                        </a>
-                                        {project.website ?
-                                        <a target="_blank" rel="noreferrer" href={project.website}>
-                                            <button className="textImg">Visit website</button>
-                                        </a>
-                                        :
-                                        ''
-                                        }
-                                    </div>
-                                </div> 
                             </div>
                     </SkillImg>
                 </ProjectBody>
@@ -127,47 +127,11 @@ const ProjectDetail = () => {
 }
 
 const Details = styled(motion.div)`
-    position: relative;
     color: white;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
 `;
 
 const Arrows = styled.div`
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    .skip-back{
-        position: absolute;
-        left: 1%;
-        opacity: .6;
-        color: white;
-        transition: all 0.5s ease;
-        &:hover{
-            color: #23d997;
-            opacity: 1;
-            cursor: pointer;
-        }
-    }
-    .skip-forward{
-        position: absolute;
-        right: 1%;
-        opacity: .6;
-        color: white;
-        transition: all 0.5s ease;
-        &:hover{
-            color: #23d997;
-            opacity: 1;
-            cursor: pointer;
-        }
-    }
+
 `;
 
 const HeadLine = styled.div`
@@ -194,6 +158,34 @@ const ProjectSpec = styled.div`
     font-weight: lighter;
     font-size: .9rem;
     }
+    .skip-back{
+        position: absolute;
+        left: 3%;
+        opacity: .6;
+        color: white;
+        transition: all 0.5s ease;
+        &:hover{
+            color: #23d997;
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+    .skip-forward{
+        position: absolute;
+        right: 3%;
+        opacity: .6;
+        color: white;
+        transition: all 0.5s ease;
+        &:hover{
+            color: #23d997;
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+    @media (max-width: 700px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 `;
 
 const ProjectBody = styled.div`
@@ -208,13 +200,54 @@ const ProjectBody = styled.div`
     }
 `;
 
-const Skills = styled.div`
+const ProjectHeader = styled.div`
+    width: 100%;
+
+    padding-bottom: 1rem;
+        .skillsection-line{
+            background: #23d997;
+            height: 0.2rem;
+            margin: 0.1rem 0rem 1.5rem 0rem;
+            width: 4rem;
+        }
+        p {
+            padding: 0rem 5rem 2rem 0rem;
+        }
+    @media (max-width: 1200px) {
+        margin: 0rem 3rem;
+     
+    }
+`;
+
+const ProjectSkills = styled.div`
     display: flex;
     flex-wrap: wrap;
     width: 35%;
     max-height:28rem;
     h3 {
         font-size: 1rem;
+    }
+    .btns {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 3rem;
+        button {
+            font-weight: lighter;
+            font-size: .7rem;
+            margin-right: 3rem;
+            cursor: pointer;
+            padding: .8rem 1rem;
+            border: 1px solid #23d997;
+            transition: all 0.3s ease;
+            &:hover{
+                background-color: #23d997;
+                color: white;
+            }
+            @media (max-width: 500px) {
+                margin-top: 2rem;
+                }
+        }
     }
     .skill-list-wrapper {
         padding-right: 40px;
@@ -225,15 +258,21 @@ const Skills = styled.div`
         margin: 0.1rem 0rem 1.5rem 0rem;
         width: 4rem;
     }
+
     @media (max-width: 1200px) {
         width: 100%;
         justify-content: center;
         padding: 2rem 2rem;
+        .btns {
+            margin-bottom: 6rem;
+            justify-content: center;
+        }
     }
 `;
 
+
 const SkillImg = styled.div`
-    width: 65%;
+    width: 50%;
     .img-wraper {
         background: #282828;
         position: relative;
@@ -245,52 +284,6 @@ const SkillImg = styled.div`
         img {
             width: 100%;
             height: auto;
-        }
-        .links {
-            padding: 5rem;
-            display: flex;
-            justify-content: space-around;
-            button {
-                font-weight: lighter;
-                font-size: .8rem;
-                padding: .5rem 1rem;
-                border: 1px solid #23d997;
-            }
-            h3 {
-                font-size: 1rem;
-                transition: 0.3s ease;
-            &:hover {
-                color: #23d997;
-                }
-            }
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            background-color: #1b1b1b;
-            .skillsection-line{
-                background: #23d997;
-                height: 0.2rem;
-                margin: 0.1rem 0rem 1.5rem 0rem;
-                width: 4rem;
-            }
-            .description{
-                padding: 0rem 5rem;
-                p {
-                    padding: 0rem;
-                }
-            }
-        }
-        
-        &:hover .overlay{
-            opacity: 1;
         }
     }
     @media (max-width: 1200px) {
