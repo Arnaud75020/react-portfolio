@@ -11,7 +11,7 @@ import mysql from '../assets/icons/mysql.svg';
 import scrum from '../assets/icons/scrum.svg';
 import express from '../assets/icons/express.svg';
 import styledc from '../assets/icons/styledc.png';
-import { Description, Image, SkillSection, Cards, CardList, Card} from '../styles';
+import { Description, Video, SkillSection, Cards, CardList, Card} from '../styles';
 import {useScroll} from './useScroll';
 import { scrollReveal } from '../animation';
 
@@ -21,8 +21,7 @@ const SkillsSection = () => {
     // variants={scrollReveal} animate={controls} ref={element}
 
     return ( 
-        <div id="mySkills">
-            <SkillSection >
+            <SkillSection id="mySkills">
                 <Description>
                     <h2>My <span>Skills</span></h2>
                     <Cards>
@@ -130,13 +129,12 @@ const SkillsSection = () => {
                         </CardList>
                     </Cards>
                 </Description>
-                <Image>
+                <Video>
                     <video width="400" autoPlay loop muted>
                         <source src={codevideo} type='video/mp4' />
                     </video>
-                </Image>
+                </Video>
             </SkillSection>
-        </div>
      );
 }
 
