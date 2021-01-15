@@ -78,6 +78,23 @@ export const Skills = styled(About)`
 
 `; 
 
+export const SkillSection = styled(About)`
+    background: #282828;
+    min-height: 100vh;
+    h2 {
+        padding-bottom: 5rem;
+    }
+    p {
+        width: 70%;
+        padding: 2rem 0rem 4rem 0rem;
+    }
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+`; 
+
 export const Cards = styled.div`
     display: flex;
     flex-wrap: wrap;
