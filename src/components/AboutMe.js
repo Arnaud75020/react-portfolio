@@ -10,20 +10,21 @@ import { scrollReveal } from '../animation';
 
 const AboutMe = () => {
 
-    const [element, controls] = useScroll();
+    // const [element, controls] = useScroll();
+    // variants={scrollReveal} ref={element} animate={controls}
 
     return ( 
-        <Aboutme variants={scrollReveal} ref={element} animate={controls} className="aboutme">
+        <Aboutme className="aboutme">
             <h2  id={'aboutMe'} >About <span>me</span></h2>
             <AnimateSharedLayout>
-            <Toggle title='Who I am'>
+                <Toggle title='Who I am'>
                     <div className="answer">
                         <p>I'm a french citizen, born and raised in beautiful but rainy Normandie in France !</p>
                     </div>
                 </Toggle>
                 <Toggle title='How and when did I start Web Development'>
                     <div className="answer">
-                        <p>After 8 years working in the TV show production field in Paris, I decided it was the time to change career and that's how I enrolled in an intense 5 months fullstack bootcamp in march 2020 at Wild Code School Lisbon to specialize myself in Javascirpt and ReactJS.</p>
+                        <p>After 8 years working in the TV show production field in Paris, I decided to change career and enrolled in an intense 5 months fullstack bootcamp in march 2020 at Wild Code School Lisbon to specialize myself in Javascirpt and ReactJS.</p>
                     </div>
                 </Toggle>
                 <Toggle title='How to work with me'>
