@@ -17,123 +17,126 @@ import { scrollReveal } from '../animation';
 
 const SkillsSection = () => {
 
-    const [element, controls] = useScroll();
+    // const [element, controls] = useScroll();
+    // variants={scrollReveal} animate={controls} ref={element}
 
     return ( 
-        <SkillSection variants={scrollReveal} animate={controls} ref={element}>
-            <Description>
-                <h2 id="mySkills">My <span>Skills</span></h2>
-                <Cards>
-                    <CardList>
-                    <h3>Front End</h3>
+        <div id="mySkills">
+            <SkillSection >
+                <Description>
+                    <h2>My <span>Skills</span></h2>
+                    <Cards>
+                        <CardList>
+                        <h3>Front End</h3>
+                            <div className="skillsection-line"></div>
+                            <Card>
+                                <div className="icon">
+                                    <img src={HTML} alt="icon"/>
+                                    <h5>HTML</h5>
+                                </div>
+                            </Card>                    
+                            <Card>
+                                <div className="icon">
+                                    <img src={CSS} alt="icon"/>
+                                    <h5>CSS</h5>
+                                    </div>
+                            </Card>                       
+                            <Card>
+                                <div className="icon">
+                                    <img src={JS} alt="icon"/>
+                                    <h5>Javascript</h5>
+                                </div>
+                            </Card>
+                            <Card>
+                                <div className="icon">
+                                    <img src={ReactJs} alt="icon"/>
+                                    <h5>ReactJS</h5>
+                                </div>
+                            </Card>
+                            <Card>
+                                <div className="icon">
+                                    <img src={styledc} alt="icon"/>
+                                    <h5>Styled Components</h5>
+                                    </div>
+                            </Card> 
+                        </CardList>
+                        <CardList>
+                        <h3>Back End</h3>
                         <div className="skillsection-line"></div>
-                        <Card>
-                            <div className="icon">
-                                <img src={HTML} alt="icon"/>
-                                <h5>HTML</h5>
-                            </div>
-                        </Card>                    
-                        <Card>
-                            <div className="icon">
-                                <img src={CSS} alt="icon"/>
-                                <h5>CSS</h5>
+                            <Card>
+                                <div className="icon">
+                                    <img src={mysql} alt="icon"/>
+                                    <h5>mySQL</h5>
                                 </div>
-                        </Card>                       
-                        <Card>
-                            <div className="icon">
-                                <img src={JS} alt="icon"/>
-                                <h5>Javascript</h5>
-                            </div>
-                        </Card>
-                        <Card>
-                            <div className="icon">
-                                <img src={ReactJs} alt="icon"/>
-                                <h5>ReactJS</h5>
-                            </div>
-                        </Card>
-                        <Card>
-                            <div className="icon">
-                                <img src={styledc} alt="icon"/>
-                                <h5>Styled Components</h5>
+                            </Card>                    
+                            <Card>
+                                <div className="icon">
+                                    <img src={express} alt="icon"/>
+                                    <h5>Express Server</h5>
+                                    </div>
+                            </Card>                    
+                            <Card>
+                                <div className="icon">
+                                    <img src={nodejs} alt="icon"/>
+                                    <h5>NodeJS</h5>
                                 </div>
-                        </Card> 
-                    </CardList>
-                    <CardList>
-                    <h3>Back End</h3>
-                    <div className="skillsection-line"></div>
-                        <Card>
-                            <div className="icon">
-                                <img src={mysql} alt="icon"/>
-                                <h5>mySQL</h5>
-                            </div>
-                        </Card>                    
-                        <Card>
-                            <div className="icon">
-                                <img src={express} alt="icon"/>
-                                <h5>Express Server</h5>
+                            </Card>
+                        </CardList>
+                        <CardList>
+                        <h3>Work Flow</h3>
+                        <div className="skillsection-line"></div>
+                            <Card>
+                                <div className="icon">
+                                    <img src={github} alt="icon"/>
+                                    <h5>Git/GitHub</h5>
                                 </div>
-                        </Card>                    
-                        <Card>
-                            <div className="icon">
-                                <img src={nodejs} alt="icon"/>
-                                <h5>NodeJS</h5>
-                            </div>
-                        </Card>
-                    </CardList>
-                    <CardList>
-                    <h3>Work Flow</h3>
-                    <div className="skillsection-line"></div>
-                        <Card>
-                            <div className="icon">
-                                <img src={github} alt="icon"/>
-                                <h5>Git/GitHub</h5>
-                            </div>
-                        </Card>                    
-                        <Card>
-                            <div className="icon">
-                                <img src={scrum} alt="icon"/>
-                                <h5>Agile/SCRUM</h5>
+                            </Card>                    
+                            <Card>
+                                <div className="icon">
+                                    <img src={scrum} alt="icon"/>
+                                    <h5>Agile/SCRUM</h5>
+                                    </div>
+                            </Card>                    
+                            <Card>
+                                <div className="icon">
+                                    <img src={figma} alt="icon"/>
+                                    <h5>Figma</h5>
                                 </div>
-                        </Card>                    
-                        <Card>
-                            <div className="icon">
-                                <img src={figma} alt="icon"/>
-                                <h5>Figma</h5>
-                            </div>
-                        </Card>
-                    </CardList>
-                    <CardList>
-                    <h3>And more...</h3>
-                    <div className="skillsection-line"></div>
-                        <Card>
-                            <div className="icon">
-                                <h5>WordPress</h5>
-                            </div>
-                        </Card> 
-                        <Card>
-                            <div className="icon">
-                                <h5>Framer motion</h5>
-                            </div>
-                        </Card>  
-                        <Card>
-                            <div className="icon">
-                                <h5>Apollo & GraphQL</h5>
-                            </div>
-                        </Card>                    
-                        <Card>
-                            <div className="icon">
-                                <h5>SASS</h5>
-                            </div>
-                        </Card>
-                    </CardList>
-                </Cards>
-            </Description>
-            <Image>
-                <video width="400" autoPlay loop muted>
-                    <source src={codevideo} type='video/mp4' />
-                </video>
-            </Image>
-        </SkillSection>
+                            </Card>
+                        </CardList>
+                        <CardList>
+                        <h3>And more...</h3>
+                        <div className="skillsection-line"></div>
+                            <Card>
+                                <div className="icon">
+                                    <h5>WordPress</h5>
+                                </div>
+                            </Card> 
+                            <Card>
+                                <div className="icon">
+                                    <h5>Framer motion</h5>
+                                </div>
+                            </Card>  
+                            <Card>
+                                <div className="icon">
+                                    <h5>Apollo & GraphQL</h5>
+                                </div>
+                            </Card>                    
+                            <Card>
+                                <div className="icon">
+                                    <h5>SASS</h5>
+                                </div>
+                            </Card>
+                        </CardList>
+                    </Cards>
+                </Description>
+                <Image>
+                    <video width="400" autoPlay loop muted>
+                        <source src={codevideo} type='video/mp4' />
+                    </video>
+                </Image>
+            </SkillSection>
+        </div>
      );
 }
 

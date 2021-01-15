@@ -92,7 +92,6 @@ export const SkillSection = styled(About)`
         width: 20px;
         height: 20px;
     }
-
 `; 
 
 export const Cards = styled.div`

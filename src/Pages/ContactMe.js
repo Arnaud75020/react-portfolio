@@ -16,13 +16,13 @@ const ContactMe = () => {
                 <Hide>
                     <Social variants={titleAnimation}>
                         <Circle1/>
-                            <h2>Send an email to <span>arnaud.duhe@gmail.com</span></h2>
+                            <h2>Send an email<a className="mailto"target="_blank" rel="noreferrer" href="mailto: arnaud.duhe@gmail.com">here</a></h2>
                     </Social>
                 </Hide>
                 <Hide>
                     <Social variants={titleAnimation}>
                         <Circle2/>
-                        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/arnaud-duh%C3%A9-05a00b41/">Visit my <span>Linkedin</span> profil</a>
+                        <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/arnaud-duh%C3%A9-05a00b41/">Visit my <span>Linkedin</span> profile</a>
                     </Social>
                 </Hide>
                 <Hide>
@@ -95,6 +95,11 @@ const Social = styled(motion.dev)`
         text-decoration: none;
         color: black;
     }
+    .mailto {
+        font-weight: bold;
+        color: #23d997;
+    }
+
 `;
  
 export default ContactMe;
