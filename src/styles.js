@@ -55,6 +55,17 @@ export const Image = styled.div`
         height: 60vh;
         object-fit: scale-down;
     }
+    .video-anim {
+        @media (max-width: 1200px) {
+            display: none;
+        }
+    }
+`;
+
+export const Video = styled(Image)`
+    @media (max-width: 1200px) {
+        display: none;
+    }
 `;
 
 export const Hide = styled.div`
@@ -80,7 +91,7 @@ export const Skills = styled(About)`
 
 export const SkillSection = styled(About)`
     background: #282828;
-    min-height: 100vh;
+    min-height: auto;
     h2 {
         padding-bottom: 5rem;
     }
