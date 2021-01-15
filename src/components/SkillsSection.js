@@ -11,7 +11,7 @@ import mysql from '../assets/icons/mysql.svg';
 import scrum from '../assets/icons/scrum.svg';
 import express from '../assets/icons/express.svg';
 import styledc from '../assets/icons/styledc.png';
-import { Description, Image, Skills, Cards, CardList, Card} from '../styles';
+import { Description, Image, SkillSection, Cards, CardList, Card} from '../styles';
 import {useScroll} from './useScroll';
 import { scrollReveal } from '../animation';
 
@@ -20,7 +20,7 @@ const SkillsSection = () => {
     const [element, controls] = useScroll();
 
     return ( 
-        <Skills variants={scrollReveal} animate={controls} ref={element}>
+        <SkillSection variants={scrollReveal} animate={controls} ref={element}>
             <Description>
                 <h2 id="mySkills">My <span>Skills</span></h2>
                 <Cards>
@@ -133,7 +133,7 @@ const SkillsSection = () => {
                     <source src={codevideo} type='video/mp4' />
                 </video>
             </Image>
-        </Skills>
+        </SkillSection>
      );
 }
 
